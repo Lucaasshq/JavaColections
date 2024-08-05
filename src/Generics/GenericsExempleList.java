@@ -1,6 +1,7 @@
+package Generics;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class GenericsExempleList {
     public static void main(String[] args) {
@@ -8,8 +9,8 @@ public class GenericsExempleList {
         // Exemplo sem generics
         List<Object> listaSemGenerics = new ArrayList<>();
         listaSemGenerics.add("Elemento 1");
-        listaSemGenerics.add(10);
-        listaSemGenerics.add(true);
+        listaSemGenerics.add(String.valueOf(10));
+
 
 
 
@@ -21,15 +22,17 @@ public class GenericsExempleList {
 
 
 
-        for (Object elemento : listaSemGenerics) {
-            System.out.println(elemento);
-        }
-
-        System.out.println("=======================");
 
         for (String elemento : listaGenerics) {
             System.out.println(elemento);
         }
 
+        System.out.println("=======================");
+
+
+        for (Object elemento : listaSemGenerics) {
+            String str = (String) elemento;
+            System.out.println(str);
+        }
     }
 }
