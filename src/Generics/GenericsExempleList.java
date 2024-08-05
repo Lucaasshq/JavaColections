@@ -2,9 +2,13 @@ package Generics;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class GenericsExempleList {
     public static void main(String[] args) {
+
+        Consumer<String> print = System.out::println;
+
 
         // Exemplo sem generics
         List<Object> listaSemGenerics = new ArrayList<>();
@@ -32,7 +36,9 @@ public class GenericsExempleList {
 
         for (Object elemento : listaSemGenerics) {
             String str = (String) elemento;
-            System.out.println(str);
         }
+
+        print.accept("a");
+
     }
 }
