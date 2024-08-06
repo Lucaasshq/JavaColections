@@ -23,6 +23,7 @@ public class GenericsExempleList {
 
         listaGenerics.add("Elemento 1");
         listaGenerics.add("Elemento 2");
+        String nome = "Generico";
 
 
 
